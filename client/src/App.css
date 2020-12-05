@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-family: "GameFont";
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  position: absolute;
+  width: 768px;
+  height: 400px;
+  margin: 0 auto;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.galaxyBackground {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(#000036, #4f004f);
+}
+
+.header {
+  position: relative;
+}
+
+.name {
+  text-align: center;
+  color: #fff;
+}
+
+.logoImage {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  width: 300px;
+  transform: translateX(-50%);
+}
+
+.logoImage:hover {
+  width: 310px;
+  transition-duration: 300ms;
+}
+
+.gameInput {
+  position: relative;
+  width: 400px;
+  height: 80px;
+  font-family: "GameFont";
+  background: url("./images/input.svg") center center/cover no-repeat;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  padding: 0 1rem;
+  color: #333;
+  display: inline-block;
+}
+
+.gameInput::placeholder {
+  color: #fff;
+}
+
+.gameInputContainer {
+  position: relative;
+  display: inline-block;
+  margin: 1rem 0;
+}
+
+.gameInputContainer:hover::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 406px;
+  height: 84px;
+  background: url("./images/input-active-border.svg") center center/cover
+    no-repeat;
+}
+
+.gameButton {
+  background: url("./images/button.svg") center center no-repeat;
+  width: 400px;
+  height: 80px;
+  font-size: 2rem;
+  font-family: "GameFont";
+  color: #ff5200;
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+
+.gameButton:hover,
+.gameButton:active {
+  cursor: pointer;
+  width: 400px;
+  height: 78px;
+  transition-duration: 100ms;
+}
+
+.dBlock {
+  display: block;
+}
+
+.horizontalCenter {
+  display: block;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "GameFont";
+  src: url("./fonts/logo.ttf");
+}
+
+/* Game Play CSS */
+.boardContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  width: 860px;
+  height: 860px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(15, auto);
+  justify-items: center;
+  font-size: 1rem;
+  gap: 10px;
+}
+
+.boardItem {
+  text-align: center;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boardItem img:hover {
+  width: 90%;
+  transition-duration: 300ms;
+}
+
+.player1Area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  width: 313px;
+  height: 313px;
+  grid-column: 1 / span 6;
+  grid-row: 1 / span 6;
+}
+
+.player4Area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  width: 313px;
+  height: 313px;
+  grid-column: 10 / span 6;
+  grid-row: 1 / span 6;
+}
+
+.player3Area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 313px;
+  height: 313px;
+  grid-column: 10 / span 6;
+  grid-row: 10 / span 6;
+}
+
+.player2Area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 313px;
+  height: 313px;
+  grid-column: 1 / span 6;
+  grid-row: 10 / span 6;
+}
